@@ -1,7 +1,6 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import time
 #from bert_score import score
 
 # @st.cache
@@ -111,7 +110,7 @@ with col1:
         uploaded_file = st.file_uploader("Choose a file", type=["xlsx", "csv"])
         if uploaded_file is not None:
             if uploaded_file.name.endswith('.xlsx'):
-                df = pd.read_excel(uploaded_file)
+                df = pd.read_excel("SumDeathlyHallow.xlsx")
             else:
                 df = pd.read_csv(uploaded_file)
 
